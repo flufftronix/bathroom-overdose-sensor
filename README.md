@@ -1,10 +1,10 @@
 # Bathroom Overdose Sensor
 
-This project aims to suggest bundles of software and hardware for people and/or organizations looking to provide better safety in their bathrooms, while also not sacrificing privacy: for both system maintainers avoiding cloud services dependence, as well as end users having increased access to the literal privacy bathrooms provide, with peace of mind for both end users and providers. And a hope that increased access to sanitation can also improve general public health in areas where public bathrooms are scarce (which has resulted in hepatitis-A outbreaks in Philadelphia, home of this repo's maintainer), due to fears of potential accidental overdose.
+This project aims to suggest bundles of software and hardware for people and/or organizations looking to increase access to their bathrooms without sacrificing safety or privacy (for providers: no cloud services!; for end users: the literal privacy bathrooms provide!). Along with a hope that increased access to sanitation can also improve general public health in areas where public bathrooms are scarce (which has resulted in hepatitis-A outbreaks in Philadelphia, home of this repo's maintainer), due to fears of potential accidental overdose.
 
-As there is always potential for monitoring technologies to be used to further restrict peoples' freedoms, these builds are not for detecting or even ultimately preventing any sorts of drug use or illicit activities. They are engineered to detect potential medical emergency scenarios to better facilitate medical intervention.
+As there is always potential for monitoring technologies to be used to further restrict peoples' freedoms, these builds are not intended to detect or even preventing any sort of drug use or illicit activity. They are engineered to detect potential medical emergency scenarios to better facilitate medical intervention.
 
-The warning signs this system looks for are based around symptoms for opioid overdose, but would also apply to any condition that results in loss of consciousness. This system is not currently planned to trigger because of abnormal body activities such as seizures (as can commonly occur in withdrawal from benzodiazepenes), but any ideas on addressing other emergency scenarios like this are welcome and encouraged.
+The warning signs this system looks for are based around symptoms for opioid overdose (lack of respiration, detected implicitly through lack of motion), but could also apply to any condition that results in loss of consciousness. This system is not currently planned to trigger because of abnormal body activities such as seizures (as can commonly occur in withdrawal from benzodiazepenes), but any ideas on addressing other emergency scenarios like this are welcome and encouraged.
 
 Multiple versions are planned to accommodate varying budgets. Success is measured in terms of effectiveness, reliability, inobtrusiveness (the best system shouldn't require end users to change their actions at all), and cost:
 
@@ -30,7 +30,7 @@ Multiple versions are planned to accommodate varying budgets. Success is measure
 
 ### Home Assistant Setup
 
-- Multiple timers: for first warning, second warning, and the alarm. 
+- Multiple timers: for first warning, second warning, the alarm, and total occupancy time. 
 - Automation to begin the timers, triggered on detecting motion inside the bathroom with the condition that the door is shut (this will be the most important part of choosing a PIR sensor, since many of them have long intervals after detecting motion before they'll start detecting again. Won't be an issue for the XeThru sensor, as this reports continuously out of the box.)
 - Automation to reset the timers if motion is sensed inside the bathroom
 - Automation to manually reset the timers from inside the bathroom
