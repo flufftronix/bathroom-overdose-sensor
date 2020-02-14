@@ -1,6 +1,6 @@
 # Bathroom Overdose Sensor
 
-This project aims to suggest bundles of software and hardware for people and/or organizations looking to provide better safety in their bathrooms, while also not sacrificing privacy (for both system maintainers avoiding cloud services dependence, as well as end users having increased access to the literal privacy of bathrooms without being actively policed).\
+This project aims to suggest bundles of software and hardware for people and/or organizations looking to provide better safety in their bathrooms, while also not sacrificing privacy (for both system maintainers avoiding cloud services dependence, as well as end users having increased access to the literal privacy of bathrooms without being actively policed).
 
 As there is always potential for monitoring technologies to be used to further restrict peoples' freedoms, these builds are not for detecting or even ultimately preventing any sorts of drug use or illicit activities. They are engineered to detect potential medical emergency scenarios to better facilitate medical intervention.
 
