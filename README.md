@@ -1,16 +1,24 @@
 # Bathroom Overdose Sensor
 
-Plans to use Hassio/Home Assistant as a harm reduction tool; specifically to monitor bathrooms for signs of potential accidental drug overdose.
+This project aims to suggest bundles of software and hardware for people and/or organizations looking to provide better safety in their bathrooms, while also not sacrificing privacy (for both system maintainers avoiding cloud services dependence, as well as end users having increased access to the literal privacy of bathrooms without being actively policed).\
 
-Multiple versions are planned, with two initial builds in mind:
+As there is always potential for monitoring technologies to be used to further restrict peoples' freedoms, these builds are not for detecting or even ultimately preventing any sorts of drug use or illicit activities. They are engineered to detect potential medical emergency scenarios to better facilitate medical intervention.
+
+The warning signs this system looks for are based around symptoms for opioid overdose, but would also apply to any condition that results in loss of consciousness. This system is not currently planned to trigger because of abnormal body activities such as seizures (as can commonly occur in withdrawal from benzodiazepenes), but any ideas on addressing other emergency scenarios like this are welcome and encouraged.
+
+Multiple versions are planned to accommodate varying budgets. Success is measured in terms of effectiveness, reliability, inobtrusiveness (the best system shouldn't require end users to change their actions at all), and cost:
 
 ### 1. Budget build
 
 **PIR-based**, using an inexpensive and easy to find PIR sensor. (Keeping in mind that is will run off Hassio, so any PIR that fits the task and works with the ecosystem will be usable)
 
-### 2. Best-case scenario build
+### 2. Middle-of-the-road build
 
-**Radar-based** using a Xethru sensor, on a yet-to-be-determined board, set up as an MQTT device. Initial plans were to specifically use the respiration monitor, but due to the stringent requirements at which the sensor can detect respiration this will probably not be a very useful metric. However, these units' presence and movement detection is far more fine-grained than standard PIR sensors, so until respiration becomes easier to measure this should still work well.
+**Thermal and PIR-based**, using the above along with an IR grid sensor such as the AMG8833, running attached to a Pi, BeagleBoard, Arduino etc. and sending data as an MQTT device.
+
+### 3. Best-case scenario build
+
+**Radar-based** using a Xethru sensor on a yet-to-be-determined board (probably also Pi, Beagleboard or Arduino), set up as an MQTT device. Initial interested here was specifically for the respiration monitor, but due to the stringent requirements under which the X4M200 can detect respiration (20 seconds of holding still!) this will probably not be a very useful metric. However, these units' presence and movement detection is far more fine-grained than standard PIR sensors, so the need for end users to change their actions to accommodate this system will still be the most minimal using this approach.
 
 ### Components for both builds
 
