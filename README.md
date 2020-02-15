@@ -22,11 +22,13 @@ Multiple versions are planned to accommodate varying budgets. Success is measure
 
 ### Components for both builds
 
-- Raspberry Pi running Hassio (HA-Core could work just as well; just wouldn't be as simple to implement due to the required addons), Mosquitto, and Grafana.
+- Raspberry Pi as a hub, running Hassio (HA-Core could work just as well; just wouldn't be as simple to implement due to the required addons), Mosquitto, and Grafana.
 - Door sensor, for the bathroom door.
 - Z-Wave dongle (will also include Zigbee instructions later on, and further out PoE to remove batteries and wifi from the equation entirely).
 - Speaker or Alarm (still working this out)
 - User bypass system (still figuring out hardware, but could be a bulb that flashes and emits an audio warning and a button to reset the timer)
+
+Each build will require one hub, along with individual sensors per each bathroom. An android tablet or desktop PC is suggested for system monitoring, with tablets potentially mounted outside of every bathroom in kiosk mode (showing occupancy, if any warnings have been triggered, and a console for deactivation if the alarm is triggered).
 
 ### Home Assistant Setup
 
@@ -46,3 +48,4 @@ Multiple versions are planned to accommodate varying budgets. Success is measure
 - Link to separate repo for X4M200 integration, once that's up and running
 - Hardware suggestions and compatibility lists (wiki)
 - Guide for general bathroom setup (where to place sensors, general best practice suggestions for harm reduction in bathroom setups such as  sharps containers and an outward-swinging door)
+- Advice on wifi setup: routers, securing this system over wifi, how the system could be run as an offline intranet, and isolating smart devices with IP addresses on their own subnet.
