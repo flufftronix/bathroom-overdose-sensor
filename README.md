@@ -1,4 +1,4 @@
-# Bathroom Overdose Sensor
+# YERP (Your Emergency Response Platform)
 
 This project aims to suggest bundles of software and hardware for people and/or organizations looking to increase access to their bathrooms without sacrificing safety or privacy (for providers: no cloud services!; for end users: the literal privacy bathrooms provide!). Along with a hope that increased access to sanitation can also improve general public health in areas where public bathrooms are scarce (which has resulted in hepatitis-A outbreaks in Philadelphia, home of this repo's maintainer), due to fears of potential accidental overdose.
 
